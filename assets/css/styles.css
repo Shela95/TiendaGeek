@@ -1,0 +1,1577 @@
+/* -------GLOBALES------- */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+    height: 100vh;
+    /*background-color: #adcaa6;*/
+    background:linear-gradient(90deg, #c5a275, #c88417);
+   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('/assets/images/BOSQUE\ NATIVO.webp') no-repeat center center / cover;*/
+   
+
+}
+
+main {
+    margin-top: 6rem;
+    min-height: 100vh;
+    height: auto;
+    padding: 2rem;
+
+}
+
+h1 {
+    /*color: var(--preto-branco, #FFF);*/
+    color:white;
+    font-family: Raleway;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 5rem;
+    margin-left: 10rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+h2 {
+
+   color:#1f1f15;
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h3 {
+    color: var(--preto-100, #464646);
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+fieldset {
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+legend {
+    margin-bottom: 1rem;
+    color: var(--preto-100, #464646);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+fieldset input {
+    margin: 10px 0;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    text-indent: 10px;
+}
+
+fieldset a {
+    margin-top: 2rem;
+}
+
+input {
+    color: var(--preto-100, #464646);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    text-indent: 10px;
+    padding: 1rem;
+    color: grey;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+
+label {
+    color: var(--preto-100, #464646);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #999;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: rgb(58, 58, 228);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+textarea {
+    color: var(--preto-100, #464646);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-indent: 10px;
+    padding: 1rem;
+    color: grey;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
+
+}
+
+textarea:focus {
+    outline: none;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--preto-100, #464646);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    color:whitesmoke;
+    font-weight: bold;
+}
+
+a:visited {
+
+    /* o cualquier otro valor que desees */
+    text-decoration: none;
+    /* opcional: quitar la subrayado del enlace visitado */
+}
+
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+/* Estilo cuando está desplegado */
+select:focus {
+    outline: none;
+    border-color: #5ccdfe;
+    box-shadow: 0 0 0 2px rgba(74, 149, 248, 0.3);
+}
+
+/* Estilo para las opciones */
+select option {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilo para la opción seleccionada */
+select option:checked {
+    background-color: #5ccdfe;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+
+.boton {
+
+    font-weight: bold;
+    /*background-color: rgb(88, 29, 45);*/
+    background: linear-gradient(to bottom, #d30d24, #9d1823);
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*--------- HEADER------------------------ */
+
+
+
+.header__seccion--uno {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9;
+    width: 100%;
+    position: fixed;
+    top: 0;
+  /*  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(225, 30, 30)), url('/assets/images/BOSQUE\ NATIVO.webp') no-repeat center center / cover; */
+    background:#955623;
+    background: linear-gradient(90deg, #1f1f15, #c85817);
+}
+
+
+
+.header__seccion--dos {
+    margin-top: 4rem;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////*/
+/* texto vida saludable */
+.header__titulo{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Raleway;
+    color:#f21f26;
+
+}
+/* texto coma saludable y sin preocuparse */
+    p.texto {
+   color:rgb(144, 9, 9);
+    margin-left: 10rem;
+}
+
+/*.header__titulo {
+   
+    align-items: end;
+    margin-right: 0.5rem;
+    padding-left: 1rem;
+    transition: all 400ms;
+  } */
+
+ /* .header__titulo:hover {
+     transform: scale(1.2);
+    box-shadow: 0px 0px 100px -7px rgb(235, 241, 239);
+   } */
+  
+/*Boton de Login*/
+.header__login {
+    
+    all: unset;
+    width: 5vw;
+    border: none;
+    border-width: 1rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background:linear-gradient(to bottom, #d30d24, #9d1823);
+    color: white;
+    text-align: center;
+    align-self: center;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid;
+  }
+
+  .header__login:hover{
+    cursor: pointer;
+    background: linear-gradient(to top, #8de49b, #2f800a);
+    text-decoration: underline;
+  }
+/*boton del header*/
+/*
+.header__login {
+    border-radius: 30%;
+
+}*/
+
+.logo__form--input {
+    
+    padding: .5rem;
+    border-radius: 30px;
+    border: 1px solid;
+}
+
+.logo__imagen{
+    margin: 0;
+    padding-right: 120px;
+    margin: .2rem;
+}
+
+.logo__form {
+        padding: .5rem;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+.logo__form {
+    padding: .1rem;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__form--input {
+    font-size: 14px;
+    align-items: center;
+}
+/* todo el buscar */
+.input__contenedor {
+    position: relative;
+    display: inline-block;
+    margin-left: 10rem;
+
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+
+ /*.banner {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('/assets/images/BOSQUE\ NATIVO.webp') no-repeat center center / cover;
+   
+    background: url('/assets/images/BOSQUE_NATIVO.png') no-repeat center center / cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 320px;  
+} 
+
+.header__titulo {
+    position: absolute;
+    position: absolute;
+    top: 35%;
+    left: 200px;
+    color: aliceblue;
+    line-height: 30px;
+} 
+
+
+
+
+
+/* -----------------SECCION UNO ----------------- */
+
+.seccion__uno {
+    /*padding: 1rem;*/
+    /*background-color: #042c3d;*/
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.seccion__uno>div {
+    height: auto;
+
+}
+
+.categoria__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+
+
+
+
+/*------------------- PRODUCTO -------------------------*/
+
+.producto__imagen {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto__imagen--detalle {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.producto__card__imagen{
+    border-radius: 8px;
+}
+
+.items__lista {
+    display: flex;
+}
+
+
+/* -----------LOGIN----------------- */
+
+
+
+
+.login__form {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.login__form>h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.producto__card,
+p,
+h3 {
+    margin-bottom: .5rem;
+}
+
+.producto__card__imagen {
+    height: 150px;
+    width: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.contenedor__producto {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* .todos{
+    display: flex;
+    
+} */
+
+.categoria__contenedor {
+    margin-bottom: 2rem;
+
+
+}
+
+.detalle__producto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    gap: 2rem;
+
+}
+
+.detalles__info {
+    display: flex;
+    flex-direction: column;
+    /* padding: 2rem; */
+    line-height: 30px;
+    width: 70%;
+
+}
+
+.producto__descripcion {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.boton-eliminar {
+    padding-left: .55rem;
+    padding-top: .6rem;
+    padding-right: .8rem;
+    transition: transform .2s;
+}
+
+.boton-editar {
+    padding-right: .7rem;
+    padding-top: .55rem;
+    transition: transform .2s;
+}
+
+.boton-eliminar:hover {
+    transform: scale(1.3);
+}
+
+.boton-editar:hover {
+    transform: scale(1.3);
+}
+
+/* -----------------FOOTER-------------- */
+
+.footer {
+
+    /*background-color: rgb(19, 48, 26);*/
+    background-color: rgb(61 58 50);
+    padding:3rem 0;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px -2px 6px rgba(11, 32, 77, 0.1);
+}
+
+.footer__titulo {
+font-size: 25px;
+font-family: Raleway;
+font-weight: bold;
+color: #ccc;
+margin: -85px;
+}
+.footer__diccionario {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+
+.footer__formulario--fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__leyenda{
+    color:rgb(161, 170, 179);
+}
+.footer__diccionario>a {
+    color: rgb(161, 170, 179);
+}
+
+.biografia {
+    text-align: center;
+    padding: 4rem;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* -------GLOBALES------- */
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Ubuntu', sans-serif;
+        min-height: 100vh;
+        height: 100vh;
+
+
+    }
+
+    main {
+        margin-top: 4rem;
+        min-height: 100vh;
+        height: auto;
+        padding: 2rem;
+
+    }
+
+    h1 {
+        color: var(--preto-branco, #FFF);
+        font-family: Raleway;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h2 {
+
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h3 {
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    fieldset {
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+
+    }
+
+    legend {
+        margin-bottom: 1rem;
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    fieldset input {
+        margin: 10px 0;
+        width: 100%;
+        height: 40px;
+        text-align: left;
+        text-indent: 10px;
+    }
+
+    fieldset a {
+        margin-top: 2rem;
+    }
+
+    input {
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border: none;
+        text-indent: 10px;
+        padding: 1rem;
+        color: grey;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+
+
+    label {
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s;
+        pointer-events: none;
+    }
+
+    input:focus~label,
+    input:valid~label {
+        top: -20px;
+        font-size: 14px;
+        color: #999;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: rgb(58, 58, 228);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    textarea {
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-indent: 10px;
+        padding: 1rem;
+        color: grey;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        border: none;
+        width: 100%;
+
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
+    a {
+        background-color: transparent;
+        text-decoration: none;
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        color: #444aec;
+    }
+
+    a:visited {
+
+        /* o cualquier otro valor que desees */
+        text-decoration: none;
+        /* opcional: quitar la subrayado del enlace visitado */
+    }
+
+
+    select {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 200px;
+    }
+
+    /* Estilo cuando está desplegado */
+    select:focus {
+        outline: none;
+        border-color: #5ccdfe;
+        box-shadow: 0 0 0 2px rgba(74, 149, 248, 0.3);
+    }
+
+    /* Estilo para las opciones */
+    select option {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* Estilo para la opción seleccionada */
+    select option:checked {
+        background-color: #5ccdfe;
+        color: #fff;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+
+
+    .boton {
+
+        font-weight: bold;
+        background-color: rgb(58, 58, 228);
+        border: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+
+    /* ---------- HEADER --------------------- */
+
+    .header__seccion--uno {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: aliceblue;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+        z-index: 9;
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+
+    .header__seccion--dos {
+        margin-top: 5rem;
+    }
+
+    .header__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo__form--input {
+        padding: .5rem;
+        border-radius: 50px;
+        border: 1px solid;
+    }
+
+    .logo__imagen,
+    .logo__form {
+        padding: 1rem;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo__form--input {
+        font-size: 10px;
+        align-items: center;
+    }
+
+    .input__contenedor {
+        position: relative;
+        display: inline-block;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+    }
+
+
+    .banner {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('/assets/images/BOSQUE\ NATIVO.webp') no-repeat center center / cover;
+        width: 100%;
+        height: 300px;
+    }
+    /* titulo vida saludable */
+
+    .header__titulo {
+        position: absolute;
+        position: absolute;
+        top: 45%;
+        /* left: 50px; */
+        /*color: aliceblue;*/
+        line-height: 30px;
+        left: 200px;
+    }
+
+
+
+
+
+    /* -----------------SECCION UNO ----------------- */
+
+    .seccion__uno {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion__uno>div {
+        min-height: 40rem;
+
+
+    }
+
+    .categoria__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+    }
+
+
+
+
+    /*------------------- PRODUCTO -------------------------*/
+
+    .producto__imagen {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .producto__imagen--detalle {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .items__lista {
+        display: flex;
+    }
+
+
+    /* -----------LOGIN----------------- */
+
+
+
+
+    .login__form {
+        width: 40%;
+        margin: 0 auto;
+        padding: 20px;
+
+    }
+
+    .login__form>h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .producto__card,
+    p,
+    h3 {
+        margin-bottom: .5rem;
+    }
+
+    .producto__card__imagen {
+        height: 120px;
+        width: 120px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .contenedor__producto {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        background-color: #464646;
+    }
+
+
+    .categoria__contenedor {
+        margin-bottom: 0rem;
+
+
+    }
+
+    .detalle__producto {
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem;
+        gap: 2rem;
+
+    }
+
+    .detalles__info {
+        display: flex;
+        flex-direction: column;
+        /* padding: 2rem; */
+        line-height: 30px;
+        width: 70%;
+
+    }
+
+    .producto__descripcion {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .boton-eliminar {
+        padding-left: .55rem;
+        padding-top: .6rem;
+        padding-right: .8rem;
+        transition: transform .2s;
+    }
+
+    .boton-editar {
+        padding-right: .7rem;
+        padding-top: .55rem;
+        transition: transform .2s;
+    }
+
+    .boton-eliminar:hover {
+        transform: scale(1.3);
+    }
+
+    .boton-editar:hover {
+        transform: scale(1.3);
+    }
+
+    /* -----------------FOOTER-------------- */
+
+    .footer {
+
+        background-color: rgb(208, 227, 241);
+        padding: 3rem 0;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer__diccionario {
+        display: flex;
+        flex-direction: column;
+        line-height: 30px;
+        font-size: 15px;
+        font-weight: 400;
+
+    }
+
+
+    .footer__formulario--fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__diccionario>a {
+        color: rgb(61, 73, 86);
+    }
+
+    .biografia {
+        text-align: center;
+        padding: 4rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* -------GLOBALES------- */
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        
+        font-family: 'Ubuntu', sans-serif;
+        min-height: 100vh;
+        height: 100vh;
+        width: 100vw;
+
+    }
+
+    main {
+        margin-top: 4rem;
+        min-height: 100vh;
+        height: auto;
+        padding: .5rem;
+
+    }
+
+    h1 {
+        color: var(--preto-branco, #FFF);
+        font-family: Raleway;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h2 {
+
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h3 {
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    fieldset {
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+
+    }
+
+    legend {
+        margin-bottom: 1rem;
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    fieldset input {
+        margin: 10px 0;
+        width: 100%;
+        height: 40px;
+        text-align: left;
+        text-indent: 10px;
+    }
+
+    fieldset a {
+        margin-top: 2rem;
+    }
+
+    input {
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border: none;
+        text-indent: 10px;
+        padding: 1rem;
+        color: grey;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+
+
+    label {
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s;
+        pointer-events: none;
+    }
+
+    input:focus~label,
+    input:valid~label {
+        top: -20px;
+        font-size: 14px;
+        color: #999;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: rgb(58, 58, 228);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    textarea {
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-indent: 10px;
+        padding: 1rem;
+        color: grey;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        border: none;
+        width: 100%;
+
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
+    a {
+        background-color: transparent;
+        text-decoration: none;
+        color: var(--preto-100, #464646);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        color: #444aec;
+    }
+
+    a:visited {
+
+        /* o cualquier otro valor que desees */
+        text-decoration: none;
+        /* opcional: quitar la subrayado del enlace visitado */
+    }
+
+
+    select {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 200px;
+    }
+
+    /* Estilo cuando está desplegado */
+    select:focus {
+        outline: none;
+        border-color: #5ccdfe;
+        box-shadow: 0 0 0 2px rgba(74, 149, 248, 0.3);
+    }
+
+    /* Estilo para las opciones */
+    select option {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* Estilo para la opción seleccionada */
+    select option:checked {
+        background-color: #5ccdfe;
+        color: #fff;
+    }
+
+    form {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+
+
+    .boton {
+
+        font-weight: bold;
+        background-color: rgb(58, 58, 228);
+        border: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+
+    /* ---------- HEADER --------------------- */
+
+    .header__seccion--uno {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aliceblue;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+        z-index: 9;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+    }
+
+
+    .header__seccion--dos {
+        margin-top: 5rem;
+    }
+
+    .header__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__login {
+        width: 70px;
+        margin-right: 3rem;
+
+    }
+
+    .logo__form--input {
+        width: 12px;
+        padding: .5rem;
+        border-radius: 50px;
+        border: 1px solid;
+    }
+
+    .logo__imagen {
+        height: 60px;
+        padding: 1rem;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .logo__form {
+        margin: 0 2rem;
+    }
+
+    .logo__form--input {
+        display: none;
+    }
+
+    .input__contenedor {
+        position: relative;
+        display: inline-block;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+    }
+
+
+    .banner {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('/assets/images/BOSQUE\ NATIVO.webp') no-repeat center center / cover;
+        width: 100%;
+        height: 300px;
+    }
+
+    .header__titulo {
+        position: absolute;
+        position: absolute;
+        top: 30%;
+        left: 30px;
+        color: aliceblue;
+        line-height: 20px;
+
+    }
+
+
+
+
+
+    /* -----------------SECCION UNO ----------------- */
+
+    .seccion__uno {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 100rem;
+    }
+
+    .seccion__uno>div {
+        min-height: 65rem;
+    }
+
+    .categoria__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+    }
+
+
+
+
+    /*------------------- PRODUCTO -------------------------*/
+
+    .producto__imagen {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .producto__imagen--detalle {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .items__lista {
+        display: flex;
+    }
+
+
+    /* -----------LOGIN----------------- */
+
+
+
+
+    .login__form {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+
+    }
+
+    .login__form>h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .producto__card,
+    p,
+    h3 {
+        margin-bottom: .5rem;
+    }
+
+    .producto__card__imagen {
+        height: 120px;
+        width: 120px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .contenedor__producto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+
+    .categoria__contenedor {
+        margin-bottom: 4rem;
+    }
+
+    .detalle__producto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 3rem 1rem;
+        gap: 2rem;
+
+    }
+
+    .detalles__info {
+        display: flex;
+        flex-direction: column;
+        /* padding: 2rem; */
+        line-height: 30px;
+        width: 70%;
+
+    }
+
+    .producto__descripcion {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .boton-eliminar {
+        padding-left: .55rem;
+        padding-top: .6rem;
+        padding-right: .8rem;
+        transition: transform .2s;
+    }
+
+    .boton-editar {
+        padding-right: .7rem;
+        padding-top: .55rem;
+        transition: transform .2s;
+    }
+
+    .boton-eliminar:hover {
+        transform: scale(1.3);
+    }
+
+    .boton-editar:hover {
+        transform: scale(1.3);
+    }
+
+    /* -----------------FOOTER-------------- */
+
+    .footer {
+
+        background-color: rgb(208, 227, 241);
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer__diccionario {
+        display: flex;
+        flex-direction: column;
+        line-height: 30px;
+        font-size: 15px;
+        font-weight: 400;
+
+    }
+
+
+    .footer__formulario--fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__diccionario>a {
+        color: rgb(61, 73, 86);
+    }
+
+    .biografia {
+        text-align: center;
+        padding: 4rem;
+    }
+
+    /* Agrega aquí más estilos específicos para dispositivos móviles */
+}

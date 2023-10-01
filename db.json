@@ -1,0 +1,69 @@
+{
+  "productos": [
+    {
+      "nombre": "Salchichas",
+      "precio": 14000,
+      "imagen": "https://thumbs.dreamstime.com/z/salchichas-6224367.jpg?w=992",
+      "categoria": "carnes",
+      "descripcion": "Elaborada a base de soya",
+      "id": "1"
+     },
+     {
+      "nombre": "Salchichon",
+      "precio": 20000,
+      "imagen": "https://espanadiario.tips/filesedc/uploads/363/img/2022/05/1200/trozos-cortados-de-chorizo-con-su-caracteristico-color-rojizo-6294cb4c91e42.webp",
+      "categoria": "carnes",
+      "descripcion": "Elaborado con lentejas y frijol",
+      "id": "2"
+     },
+     {
+      "nombre": "Mortadela",
+      "precio": 13000,
+      "imagen": "https://okdiario.com/img/2021/06/03/mortadela-vegana-casera-una-receta-sencilla-655x368.jpg",
+      "categoria": "carnes",
+      "descripcion": "Elaborad a base de soya",
+      "id": "3"
+     },
+     {
+      "nombre": "Papas aborrajadas",
+      "precio": 1500,
+      "imagen": "http://1.bp.blogspot.com/-RFPzuXpYcP8/TnIhBvWj3YI/AAAAAAAAAQg/rNDt07QvBVQ/s1600/papaaborrajada2.jpg",
+      "categoria": "fritanga",
+      "descripcion": "Elaboradas de papa negra",
+      "id": "4"
+     },
+     {
+      "nombre": "Empanadas",
+      "precio": 12000,
+      "imagen": "https://thumbs.dreamstime.com/z/empanada-colombiano-con-la-salsa-picante-en-fondo-de-madera-106687587.jpg?w=992/",
+      "categoria": "fritanga",
+      "descripcion": "Elaborada de papa negra y amarilla,paquete de doce empanadas",
+      "id": "5"
+     },
+     {
+      "nombre": "Pastel de yuva",
+      "precio": 4500,
+      "imagen": "https://www.cocina-colombiana.com/base/stock/Recipe/29-image/29-image_web.jpg.webp",
+      "categoria": "fritanga",
+      "descripcion": "Elaborado de yuca",
+      "id": "6"
+     },
+     {
+      "nombre": "Pastel de yuva 2",
+      "precio": 4500,
+      "imagen": "https://www.cocina-colombiana.com/base/stock/Recipe/29-image/29-image_web.jpg.webp",
+      "categoria": "otras",
+      "descripcion": "Elaborado de yuca",
+      "id": "10"
+     },
+     {
+      "nombre": "Carne de res en salsa de tomate",
+      "imagen": "https://2trendies.com/hero/2023/05/carneres.jpg?width=1200&aspect_ratio=16:9",
+      "precio": "5800",
+      "descripcion": "Los guisos de carne son los típicos platos de la abuela como el guiso de carne clásico o el mismo guiso hecho en olla exprés. Son deliciosos, bien nutritivos y calóricos. Nos ayudan a obtener toda la energía para enfrentar el resto del día y nos mantienen calentitos cuando las temperaturas son muy bajas.",
+      "categoria": "carnes",
+      "id": "11"
+     }
+
+  ]
+}

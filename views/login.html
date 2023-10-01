@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Kanit&family=Montserrat:wght@300;400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@900&family=Staatliches&family=Ubuntu:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__seccion--uno">
+            <div class="header__logo">
+                <a href="/index.html"><img class="logo__imagen" src="/assets/images/Garden (1).png" alt=""></a>
+                <a href="/index.html"><p class="header__titulo">Garden Life</p></a>
+                <!-- <form class="logo__form" action="https://www.ejemplo.com/buscar" method="GET"> -->
+                    <!-- <div class="input__contenedor">
+                        <input class="logo__form--input" type="text" name="query" placeholder="Buscar...">
+                        <i class="bi bi-search icon"></i>
+                    </div> -->
+                <!-- </form> -->
+            </div>
+
+            <div>
+                <button class="header__login boton" href="#login">Login</button>
+            </div>
+
+    </header>
+    <main class="main">
+        <div class="login__form">
+            <h2>Iniciar sesión</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="usuario" required data-form-usuario data-tipo="usuario">
+                    <label for="usuario">Usuario</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="email" required data-form-password data-tipo="password">
+                    <label for="password">Password</label>
+                </div>
+                <input id="btn-login" class="boton" type="submit" value="Iniciar sesión">
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div>
+            <div class="header__logo">
+                <img src="/assets/images/Garden (1).png" alt="">
+                <p class="footer__titulo">Garden Life</p>
+            </div>
+        </div>
+        <div class="footer__diccionario">
+            <a href="#">Quienes somos</a>
+            <a href="">Politica de privacidad</a>
+            <a href="">Programa de fidelidad</a>
+            <a href="">Nuestras Tiendas</a>
+            <a href="">Quiero ser franquiciado</a>
+            <a href="">Anuncie aqui</a>
+        </div>
+        <div class="footer__contacto">
+            <form class="footer__formulario">
+                <fieldset class="footer__formulario--fieldset">
+                    <legend class="footer__leyenda">Hable con nosotros</legend>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="3"
+                        placeholder="Dejanos un mensaje..."></textarea>
+                    <input class="boton" type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </div>
+    </footer>
+    <div class="biografia">Desarrollado por <span>Christian Francisco Martinez</span> 2023 </div>
+    <script type="module" src="/controllers/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
