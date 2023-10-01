@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Kanit&family=Montserrat:wght@300;400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@900&family=Staatliches&family=Ubuntu:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.et/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Kanit&family=Montserrat:wght@300;400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@900&family=Staatliches&family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.et/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<body> 
+  <body>
     <header class="header">
-        <div class="header__seccion--uno">
-            <div class="header__logo">
-                <a href="/index.html"><img class="logo__imagen" src="/assets/images/logo.svg" alt=""></a>
-                <form class="logo__form" action="https://www.ejemplo.com/buscar" method="GET">
-                    <div class="input__contenedor">
-                        <input class="logo__form--input" type="text" name="query" placeholder="Buscar..." data-buscador>
-                        <i class="bi bi-search icon"></i>
-                    </div>
-                </form>
+      <div class="header__seccion--uno">
+        <div class="header__logo">
+          <a href="/index.html"
+            ><img class="logo__imagen" src="/assets/images/logo.svg" alt=""
+          /></a>
+          <form
+            class="logo__form"
+            action="https://www.ejemplo.com/buscar"
+            method="GET"
+          >
+            <div class="input__contenedor">
+              <input
+                class="logo__form--input"
+                type="text"
+                name="query"
+                placeholder="Buscar..."
+                data-buscador
+              />
+              <i class="bi bi-search icon"></i>
             </div>
-
-            <div>
-                <a class="header__login boton" href="/views/login.html">Login</a>
-            </div>
+          </form>
         </div>
-        <!-- <div class="header__seccion--dos">
+
+        <div>
+          <a class="header__login boton" href="/views/login.html">Login</a>
+        </div>
+      </div>
+      <!-- <div class="header__seccion--dos">
             <div class="banner"></div>
             <div class="header__titulo">
                 <h1 class="titulo">Febrero Promocional</h1>
@@ -45,18 +59,14 @@
     </header>
 
     <main>
-
-        <section class="seccion__uno">
-            <div class="starwars__contenedor">
-                <div class="categoria__head">
-                    <h2>Todos los productos</h2>
-                </div>
-                <div class="contenedor__producto" data-todos-productos>
-
-                </div>
-            </div>
-
-        </section>
+      <section class="seccion__uno">
+        <div class="starwars__contenedor">
+          <div class="categoria__head">
+            <h2>Todos los productos</h2>
+          </div>
+          <div class="contenedor__producto" data-todos-productos></div>
+        </div>
+      </section>
     </main>
     <!-- <footer class="footer">
         <div>
@@ -84,12 +94,14 @@
             </form>
         </div>
     </footer> -->
-    
+
     <script type="module" src="/controllers/todo-productos.js"></script>
     <script type="module" src="/services/client-services.js"></script>
     <script type="module" src="/controllers/cliente-controller.js"></script>
-    <script type="module" src="/controllers/crear-producto-controller.js"></script>
+    <script
+      type="module"
+      src="/controllers/crear-producto-controller.js"
+    ></script>
     <script type="module" src="/controllers/busqueda.js"></script>
-</body>
-
+  </body>
 </html>
